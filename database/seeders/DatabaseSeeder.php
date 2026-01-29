@@ -23,17 +23,9 @@ class DatabaseSeeder extends Seeder
             'email' => 'user@app.com',
         ]);
 
-        ProgrammingLanguage::factory(10)->create();
-
-        Projects::factory(10)->create()
-            ->each(function ($project) {
-                $project->tags()->sync(Tag::factory(3)->create([
-                    'type' => 'project',
-                ])->pluck('id'));
-            });
-
-
-        Social::factory(10)->create();
+        $this->call([
+            StackSeeder::class,
+        ]);
     }
 
 }

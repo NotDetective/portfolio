@@ -1,5 +1,12 @@
 <script setup>
 import {ref} from "vue";
+import Skills from "@/Shared/Portfolio/Parts/Skills.vue";
+
+defineProps({
+    stacks: {
+        type: Array
+    }
+});
 
 const isMobileMenuOpen = ref(false);
 
@@ -100,70 +107,7 @@ const toggleMobileMenu = () => {
         </div>
     </section>
 
-    <section id="skills" class="py-20 bg-card/30">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-white mb-12 text-center"><span class="border-b-4 border-primary pb-1">My Tech Stack</span>
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-card p-6 rounded-xl border border-slate-700 hover:border-primary/50 transition-colors">
-                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
-                        <svg class="w-6 h-6 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                        </svg>
-                        Frontend
-                    </h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">HTML5/CSS3</span>
-                        <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">JavaScript (ES6+)</span>
-                        <span class="px-3 py-1 bg-slate-700 rounded-full text-sm text-primary">React</span>
-                        <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">Tailwind CSS</span>
-                        <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">Next.js</span>
-                        <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">TypeScript</span>
-                    </div>
-                </div>
-
-                <div class="bg-card p-6 rounded-xl border border-slate-700 hover:border-primary/50 transition-colors">
-                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
-                        <svg class="w-6 h-6 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
-                        </svg>
-                        Backend
-                    </h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-700 rounded-full text-sm text-primary">Node.js</span>
-                        <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">Python</span>
-                        <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">PostgreSQL</span>
-                        <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">MongoDB</span>
-                        <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">Express</span>
-                        <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">Redis</span>
-                    </div>
-                </div>
-
-                <div class="bg-card p-6 rounded-xl border border-slate-700 hover:border-primary/50 transition-colors">
-                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
-                        <svg class="w-6 h-6 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
-                        Tools & DevOps
-                    </h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">Git</span>
-                        <span class="px-3 py-1 bg-slate-700 rounded-full text-sm text-primary">Docker</span>
-                        <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">AWS</span>
-                        <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">Linux</span>
-                        <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">Jira</span>
-                        <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">Figma</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <skills :stacks="stacks" />
 
     <section id="experience" class="py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

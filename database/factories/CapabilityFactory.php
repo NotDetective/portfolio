@@ -2,12 +2,13 @@
 
 namespace Database\Factories;
 
+use App\Models\Stack;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Tag>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Capability>
  */
-class TagFactory extends Factory
+class CapabilityFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +18,8 @@ class TagFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->word,
+            'name' => fake()->word(),
+            'stack_id' => Stack::inRandomOrder()->get()->first()->id
         ];
     }
 }
