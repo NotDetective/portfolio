@@ -1,9 +1,13 @@
 <script setup>
 import {ref} from "vue";
 import Skills from "@/Shared/Portfolio/Parts/Skills.vue";
+import Experience from "@/Shared/Portfolio/Parts/Experience.vue";
 
 defineProps({
     stacks: {
+        type: Array
+    },
+    experiences : {
         type: Array
     }
 });
@@ -109,62 +113,7 @@ const toggleMobileMenu = () => {
 
     <skills :stacks="stacks" />
 
-    <section id="experience" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-white mb-12 text-center"><span class="border-b-4 border-primary pb-1">Work Experience</span>
-            </h2>
-
-            <div class="relative border-l border-slate-700 ml-3 md:ml-6 space-y-12">
-
-                <div class="relative pl-8 md:pl-12">
-                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-dark"></div>
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                        <h3 class="text-xl font-bold text-white">Senior Software Engineer</h3>
-                        <span
-                            class="text-sm font-mono text-primary bg-primary/10 px-2 py-1 rounded">2022 - Present</span>
-                    </div>
-                    <p class="text-lg text-slate-400 mb-2">Tech Solutions Inc.</p>
-                    <p class="text-slate-400 mb-4 max-w-2xl">
-                        Leading the frontend team in migrating a legacy monolithic application to a microservices
-                        architecture using React and Next.js. Improved page load speed by 40%.
-                    </p>
-                    <ul class="list-disc list-inside text-sm text-slate-500 space-y-1">
-                        <li>Mentored 3 junior developers</li>
-                        <li>Implemented CI/CD pipelines</li>
-                        <li>Reduced technical debt by 25%</li>
-                    </ul>
-                </div>
-
-                <div class="relative pl-8 md:pl-12">
-                    <div
-                        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-600 border-4 border-dark"></div>
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                        <h3 class="text-xl font-bold text-white">Full Stack Developer</h3>
-                        <span class="text-sm font-mono text-slate-500 bg-slate-800 px-2 py-1 rounded">2020 - 2022</span>
-                    </div>
-                    <p class="text-lg text-slate-400 mb-2">Creative Agency</p>
-                    <p class="text-slate-400 mb-4 max-w-2xl">
-                        Developed and maintained client websites using the MERN stack. Collaborated closely with
-                        designers to implement pixel-perfect UIs.
-                    </p>
-                </div>
-
-                <div class="relative pl-8 md:pl-12">
-                    <div
-                        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-600 border-4 border-dark"></div>
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                        <h3 class="text-xl font-bold text-white">Junior Developer</h3>
-                        <span class="text-sm font-mono text-slate-500 bg-slate-800 px-2 py-1 rounded">2018 - 2020</span>
-                    </div>
-                    <p class="text-lg text-slate-400 mb-2">StartUp Hub</p>
-                    <p class="text-slate-400 mb-4 max-w-2xl">
-                        Assisted in building RESTful APIs using Python and Flask. Wrote automated tests to ensure code
-                        quality.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <experience :experiences="experiences" />
 
     <section id="projects" class="py-20 bg-card/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -45,7 +45,3 @@ defineProps({
         </div>
     </section>
 </template>
-
-<style scoped>
-/* No specific styles needed, tailwind handles it */
-</style>

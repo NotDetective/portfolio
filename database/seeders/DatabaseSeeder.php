@@ -3,12 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Models\ProgrammingLanguage;
-use App\Models\Projects;
-use App\Models\Skils;
-use App\Models\Social;
-use App\Models\Tag;
+use App\Models\Experience;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -23,8 +20,14 @@ class DatabaseSeeder extends Seeder
             'email' => 'user@app.com',
         ]);
 
+        Experience::factory()->create([
+           'start_date' => Carbon::now()->subDay( rand(20,70) ),
+           'end_date' => null
+        ]);
+
         $this->call([
             StackSeeder::class,
+            ExperienceSeeder::class,
         ]);
     }
 
