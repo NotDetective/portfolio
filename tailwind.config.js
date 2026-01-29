@@ -7,18 +7,14 @@ export default {
     ],
     theme: {
         extend: {
-            borderWidth: {
-                '3': '3px',
-            },
             colors: {
-                background: '#ffffff',
-                purpleDark: '#190E25',
-                blue: '#0FA3E2',
-                purple: '#6366F1',
+                primary: '#0ea5e9', // Sky blue
+                dark: '#0f172a',    // Slate 900
+                card: '#1e293b',    // Slate 800
             },
             fontFamily: {
-                sofiaSans: ['Sofia Sans', 'sans-serif'],
-            }
+                sans: ['Inter', 'sans-serif'],
+            },
         },
     },
     plugins: [],

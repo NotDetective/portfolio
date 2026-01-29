@@ -69,7 +69,6 @@ const submit = () => {
             <Checkbox
                 label="Remember me"
                 name="remember"
-                required
                 v-model="form.remember"
                 :error="form.errors.remember"
             />

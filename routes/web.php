@@ -17,12 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PortfolioController::class, 'index'])
     ->name('home');
-Route::get('/about', [PortfolioController::class, 'about'])
-    ->name('about');
-Route::get('/contact', [PortfolioController::class, 'contact'])
-    ->name('contact');
-Route::get('/my-work', [PortfolioController::class, 'work'])
-    ->name('work');
+
 
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/login', [AuthController::class, 'show'])
@@ -35,7 +30,5 @@ Route::get('/logout', [AuthController::class, 'logout'])
     ->name('logout');
 
 Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
-
-
 
 });

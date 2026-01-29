@@ -1,7 +1,7 @@
 import {createApp, h} from 'vue';
 import {createInertiaApp, Link} from '@inertiajs/vue3';
 import {resolvePageComponent} from 'laravel-vite-plugin/inertia-helpers';
-import PortfolioLayout from "@/Shared/PortfolioLayout.vue";
+// import PortfolioLayout from "@/Shared/PortfolioLayout.vue";
 
 createInertiaApp({
     resolve: async (name) => {
@@ -10,9 +10,9 @@ createInertiaApp({
             import.meta.glob("./Pages/**/*.vue")
         );
         page.then((module) => {
-            if (module.default.layout === undefined){
-                module.default.layout = PortfolioLayout;
-            }
+            // if (module.default.layout === undefined){
+            //     module.default.layout = PortfolioLayout;
+            // }
         });
         return page;
     },
