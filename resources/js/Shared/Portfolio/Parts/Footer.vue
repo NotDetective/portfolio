@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <footer id="contact" class="bg-dark border-t border-slate-800 py-12">
+    <footer id="contact" class="  even:bg-dark odd:bg-card/30 border-t border-slate-800 py-12">
         <section id="contact" class="py-20 bg-dark border-t border-slate-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-white mb-12 text-center"><span
