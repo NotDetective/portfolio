@@ -1,4 +1,6 @@
 <script setup>
+import Card from "@/Shared/Portfolio/Components/Card.vue";
+
 defineProps({
     experiences: {
         type: Array,
@@ -8,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-    <section id="experience" class="py-20">
+    <Card id="experience">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-white mb-12 text-center">
                 <span class="border-b-4 border-primary pb-1">Work Experience</span>
@@ -44,6 +46,6 @@ defineProps({
             </div>
 
         </div>
-    </section>
+    </Card>
 </template>
 

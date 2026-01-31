@@ -1,5 +1,6 @@
 <script setup>
 import {truncate} from "@/Composables/Truncate.vue";
+import Card from "@/Shared/Portfolio/Components/Card.vue";
 
 const props = defineProps({
     projects: {
@@ -15,7 +16,7 @@ props.projects.forEach((project) => {
 </script>
 
 <template>
-    <section id="projects" class="py-20 bg-card/30">
+    <Card id="projects">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-white mb-12 text-center"><span
                 class="border-b-4 border-primary pb-1">Featured Projects</span>
@@ -89,6 +90,6 @@ props.projects.forEach((project) => {
                 </a>
             </div>
         </div>
-    </section>
+    </Card>
 </template>
 

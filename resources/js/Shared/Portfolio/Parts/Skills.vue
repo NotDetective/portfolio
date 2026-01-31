@@ -1,4 +1,6 @@
 <script setup>
+import Card from "@/Shared/Portfolio/Components/Card.vue";
+
 defineProps({
     stacks: {
         type: Array,
@@ -8,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-    <section id="skills" class="py-20 bg-card/30">
+    <Card id="skill">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-white mb-12 text-center">
                 <span class="border-b-4 border-primary pb-1">My Tech Stack</span>
@@ -43,5 +45,5 @@ defineProps({
             </div>
 
         </div>
-    </section>
+    </Card>
 </template>
