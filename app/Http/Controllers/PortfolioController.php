@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Experience;
+use App\Models\Project;
 use App\Models\Stack;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -25,9 +26,13 @@ class PortfolioController extends Controller
                 $experience['formated_date'] = $experience->formated_date,
             ]);
 
+        $projects = Project::select(['name', 'description', 'git_url', 'project_url'])
+            ->get();
+
         return Inertia::render('Portfolio/Base', [
             'stacks' => $stacks,
             'experiences' => $experiences,
+            'projects' => $projects,
         ]);
     }
 
