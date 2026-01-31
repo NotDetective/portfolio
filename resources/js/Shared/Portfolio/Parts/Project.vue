@@ -22,7 +22,7 @@ props.projects.forEach((project) => {
                 class="border-b-4 border-primary pb-1">Featured Projects</span>
             </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div v-if="projects && projects.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <div v-for="project in projects"
                      class="group bg-card rounded-xl overflow-hidden border border-slate-700 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/10">
@@ -76,7 +76,18 @@ props.projects.forEach((project) => {
                         </div>
                     </div>
                 </div>
+            </div>
 
+            <div v-else class="flex flex-col items-center justify-center py-16 px-4 border-2 border-dashed border-slate-700 rounded-xl bg-slate-800/20 text-center col-span-full">
+                <div class="bg-slate-800 p-4 rounded-full mb-4">
+                    <svg class="w-8 h-8 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-white mb-2">No Projects Added</h3>
+                <p class="text-slate-400 max-w-sm">
+                    I haven't uploaded my recent work yet. Check back soon to see what I've been building.
+                </p>
             </div>
 
             <div class="mt-12 text-center">
